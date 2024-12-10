@@ -151,7 +151,7 @@
 
 TSÍRKO é um projeto em desenvolvimento que visa oferecer serviços circenses e propor soluções para a decadência da arte circense. Esse problema tem se agravado nos últimos 50 anos, à medida que os avanços tecnológicos introduziram novas formas de entretenimento, como videogames e celulares.
 
-Este repositório tem como objetivo documentar todos os tópicos da modelagem do projeto, destinado à entrega 3 da disciplina de Arquitetura de Software.
+Este repositório tem como objetivo documentar todos os tópicos dos padrões de projeto, destinado à entrega 3 da disciplina de Arquitetura de Software.
 
 ## Entregas
 
