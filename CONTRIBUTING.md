@@ -1,5 +1,9 @@
 # Contributing
 
-Descreva sua política de contribuição neste repositório
+Para contribuir com nosso projeto visite as seguintes paginas:
 
-[Ex de contibuting](https://github.com/DNXLabs/terraform-aws-ecs/blob/master/CONTRIBUTING.md)
+  - [***Branches***](docs\Policies\Branches.md)
+  - [***Commits***](docs\Policies\Commits.md)
+  - [***Issues***](docs\Policies\Issues.md)
+  - [***Pull Requests***](docs\Policies\PullRequests.md)
+

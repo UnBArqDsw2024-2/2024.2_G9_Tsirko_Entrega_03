@@ -78,8 +78,37 @@ Além disso, a padronização permite que qualquer membro da equipe possa seguir
 <font size="3"><p style="text-align: center"><b>Autor:</b> <a href="https://github.com/autor">Nome do Autor</a>, 2024.</p></font> 
 </div>
 ```
+## Padrão de Atas
+
+A ata de reuniões feita pelo grupo devem seguir o seguinte template:
+```markdown
+
+Ata de reunião Arquitetura e desenho de software - Grupo 09 - Entrega x
+ Data:
+ Horário:
+ Local:
+
+Participantes presentes:
+- [x] [Participante](https://github.com/participante)
+- [x] [Participante](https://github.com/participante)
+- [x] [Participante](https://github.com/participante)
+- [x] [Participante](https://github.com/participante)
+
+
+Discussão:
+
+
+
+Decisões:
+
+
+Definição das tarefas
+| Nome              | Tarefa |
+| -                 |  -     |
+```
 
 ## Histórico de Versão
 | Versão | Data       | Descrição                                      | Autor               | Revisor               |
 |--------|------------|------------------------------------------------|---------------------|-----------------------|
 | 1.0    | 21/11/2024 | Primeira versão do artefato | [Amanda Campos](https://github.com/acamposs) | [Autor](https://github.com/autor) |
+| 2.0    | 10/12/2024 | Adição do padrão de Atas | [Gabriel Freitas](https://github.com/gabrielfreitass1), [Henrique Batalha](https://github.com/HeBatalha), [Isaque Santos](https://github.com/IsaqueSH) e [Vinícius Brito](https://github.com/vini051) | [Yves Pimenta](https://github.com/yvestxt) |
