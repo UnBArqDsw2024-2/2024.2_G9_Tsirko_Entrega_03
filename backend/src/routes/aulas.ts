@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { Aula } from '../models/aula'; 
+import { Aula } from '../classes/aula'; 
 
 const aulas: Aula[] = []; 
 
