@@ -1,4 +1,5 @@
 import { Evento } from './evento';
+import { EventoIngressoVisitor } from './eventoVisitor';
 
 export class Espetaculo extends Evento {
     private artistas: string;
@@ -6,6 +7,10 @@ export class Espetaculo extends Evento {
     constructor(nome: string, descricao: string, artistas: string) {
         super(nome, descricao);
         this.artistas = artistas;
+    }
+
+    accept(visitor: EventoIngressoVisitor): void {
+        visitor.visitEspetaculo(this);
     }
 
     exibirDetalhes(): void {

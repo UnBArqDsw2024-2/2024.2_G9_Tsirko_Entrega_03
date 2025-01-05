@@ -1,6 +1,8 @@
+import { EventoIngressoVisitor } from './eventoVisitor';
+
 interface ComponenteEvento {
     exibirDetalhes(): void;
-    accept(visitor: EventoVisitor): void;
+    accept(visitor: EventoIngressoVisitor): void;
 }
 
 class EventoComposite implements ComponenteEvento {
@@ -19,7 +21,7 @@ class EventoComposite implements ComponenteEvento {
         this.eventos.forEach(evento => evento.exibirDetalhes());
     }
 
-    accept(visitor: EventoVisitor): void {
+    accept(visitor: EventoIngressoVisitor): void {
         visitor.visitComposite(this);
         this.eventos.forEach(evento => evento.accept(visitor));
     }
