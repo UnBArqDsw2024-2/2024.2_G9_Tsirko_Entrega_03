@@ -1,4 +1,4 @@
-import { Evento } from './Evento';
+import { Evento } from './evento';
 
 export class Espetaculo extends Evento {
     private artistas: string;
