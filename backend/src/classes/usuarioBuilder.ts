@@ -10,3 +10,13 @@ export class UsuarioBuilder {
     this.nome = nome;
     return this;
   }
+
+  public setEmail(email: string): UsuarioBuilder {
+    this.email = email;
+    return this;
+  }
+
+  public setSenha(senha: string): UsuarioBuilder {
+    this.senha = senha;
+    return this;
+  }
