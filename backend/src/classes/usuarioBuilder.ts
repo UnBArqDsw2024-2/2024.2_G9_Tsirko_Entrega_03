@@ -20,3 +20,8 @@ export class UsuarioBuilder {
     this.senha = senha;
     return this;
   }
+  
+  public build(): Usuario {
+    if (!this.email.includes('@')) {
+      throw new Error("Email inválido!");
+    }

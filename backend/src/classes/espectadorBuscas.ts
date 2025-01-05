@@ -16,3 +16,9 @@ export class BuscaPorData implements EstrategiaDeBusca {
     );
   }
 }
+
+export class BuscaPorDescricao implements EstrategiaDeBusca {
+  public buscar(eventos: Evento[], filtro: string): Evento[] {
+    return eventos.filter(evento => evento.getDescricao().includes(filtro));
+  }
+}

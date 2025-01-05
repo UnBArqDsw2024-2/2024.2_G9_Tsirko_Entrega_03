@@ -13,4 +13,10 @@ export class SenhaProxy {
     // Criptografa a senha antes de armazená-la
     return this.criptografarSenha(senha);
   }
-    
+
+  // Verifica a complexidade da senha
+  private static verificarComplexidade(senha: string): boolean {
+    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+    return regex.test(senha);
+  }
+  
