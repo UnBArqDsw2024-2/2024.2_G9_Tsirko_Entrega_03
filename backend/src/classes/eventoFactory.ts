@@ -1,6 +1,6 @@
-import { Espetaculo } from './Espetaculo';
-import { Aula } from './Aula';
-import { Evento } from './Evento';
+import { Espetaculo } from './espetaculo';
+import { Aula } from './aula';
+import { Evento } from './evento';
 
 export class EventoFactory {
     static criarEvento(tipo: string, nome: string, descricao: string, ...detalhes: string[]): Evento {
