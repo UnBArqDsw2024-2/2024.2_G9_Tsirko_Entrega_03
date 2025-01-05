@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { Evento } from '../models/Evento'; 
+import { Evento } from '../models/evento'; 
 
 const eventos: Evento[] = []; 
 
