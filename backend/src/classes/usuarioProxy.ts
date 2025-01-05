@@ -19,4 +19,11 @@ export class SenhaProxy {
     const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
     return regex.test(senha);
   }
-  
+
+  // Criptografa a senha usando um hash seguro
+  private static criptografarSenha(senha: string): string {
+    const hash = crypto.createHmac('sha256', this.salt);
+    hash.update(senha);
+    return hash.digest('hex');
+  }
+}
