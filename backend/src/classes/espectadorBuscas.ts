@@ -7,3 +7,4 @@ export class BuscaPorNome implements EstrategiaDeBusca {
       return eventos.filter(evento => evento.getNome().includes(filtro));
     }
   }
+  
