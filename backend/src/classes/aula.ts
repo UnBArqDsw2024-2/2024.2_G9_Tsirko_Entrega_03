@@ -1,5 +1,5 @@
 import { Evento } from './evento';
-
+import { EventoIngressoVisitor } from './EventoIngressoVisitor';
 export class Aula extends Evento {
     private tema: string;
     private professor: string;
@@ -8,6 +8,10 @@ export class Aula extends Evento {
         super(nome, descricao);
         this.tema = tema;
         this.professor = professor;
+    }
+
+    accept(visitor: EventoIngressoVisitor): void {
+        visitor.visitarAula(this);
     }
 
     exibirDetalhes(): void {
