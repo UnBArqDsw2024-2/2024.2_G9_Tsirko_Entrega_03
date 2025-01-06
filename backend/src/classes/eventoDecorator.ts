@@ -4,9 +4,9 @@ export abstract class EventoDecorator extends Evento {
   protected evento: Evento;
 
   constructor(evento: Evento) {
-    super(evento.getNome(), evento.getData(), evento.getHorario(), evento.getDescricao());
+    super(evento.getNome(), evento.getDescricao(), evento.getData(), evento.getHorario());
     this.evento = evento;
-  }
+}
 
   public abstract getDescricao(): string;
 }

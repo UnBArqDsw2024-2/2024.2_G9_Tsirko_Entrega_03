@@ -23,4 +23,14 @@ export class AvaliacaoPrototype {
 
     return novaAvaliacao;
   }
+
+  /*Caso as Classes Evento e Espectador tambem utizassem o padrão prototype (tivessem clones),
+  seria necessario fazer um deepclone que seria feito da seguinte forma:
+
+  public clone(): Avaliacao {
+    const eventoClonado = this.evento.clone(); // Supondo que Evento tenha um método clone
+    const espectadorClonado = this.espectador.clone(); // Supondo que Espectador tenha um método clone
+    return new Avaliacao(eventoClonado, this.nota, this.comentario, espectadorClonado);
+  }
+  */
 }

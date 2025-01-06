@@ -22,6 +22,14 @@ export class Avaliacao {
     return this.comentario;
   }
 
+  public getAvaliacaoEspectador(): Espectador {
+    return this.espectador;
+  }
+
+  public getAvaliacaoEvento(): Evento {
+    return this.evento;
+  }
+
   public clone(): Avaliacao {
     return new Avaliacao(this.evento, this.nota, this.comentario, this.espectador);
   }
