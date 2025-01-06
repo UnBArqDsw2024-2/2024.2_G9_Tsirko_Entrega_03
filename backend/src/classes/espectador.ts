@@ -1,4 +1,4 @@
-import { Usuario } from './usuario';
+import { Usuario, TipoUsuario } from './usuario';
 import { Avaliacao } from './avaliacao';
 import { Evento } from './evento';
 import { EstrategiaDeBusca } from './estrategiaDeBusca';
@@ -9,8 +9,15 @@ export class Espectador extends Usuario {
   private dataDeNascimento: Date;
   private estrategiaDeBusca: EstrategiaDeBusca; // Estratégia configurável
 
-  constructor(nome: string, email: string, senha: string, dataDeNascimento: Date, estrategiaDeBusca: EstrategiaDeBusca) {
-    super(nome, email, senha);
+  constructor(
+    nome: string,
+    email: string,
+    senha: string,
+    tipo: TipoUsuario, // Adiciona o campo `tipo` no construtor
+    dataDeNascimento: Date,
+    estrategiaDeBusca: EstrategiaDeBusca
+  ) {
+    super(nome, email, senha, tipo); // Passa o `tipo` para o construtor da classe base
     this.dataDeNascimento = dataDeNascimento;
     this.estrategiaDeBusca = estrategiaDeBusca;
   }

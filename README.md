@@ -197,6 +197,26 @@ docsify serve ./docs
 
 Basta acessar o link [http://localhost:3000](http://localhost:3000).
 
+## 4. Como rodar o projeto
+
+## Executando localmente o backend
+
+
+Para iniciar o backend localmente, utilize o comando:
+
+```shell
+npm run dev
+```
+## Executando localmente o frontend
+
+
+Para iniciar o frontend localmente, utilize o comando:
+
+```shell
+npm run dev
+```
+
+
 ## License
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](../LICENSE) para mais detalhes.
