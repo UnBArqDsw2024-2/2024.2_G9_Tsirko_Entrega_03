@@ -1,5 +1,6 @@
 import { Aula } from "./aula";
 import { Espetaculo } from "./espetaculo";
+import { EventoComposite } from "./eventoComposite";
 
 interface EventoVisitor {
     visitComposite(composite: EventoComposite): void;
@@ -7,7 +8,7 @@ interface EventoVisitor {
     visitAula(aula: Aula): void;
 }
 
-class EventoIngressoVisitor implements EventoVisitor {
+export class EventoIngressoVisitor implements EventoVisitor {
     private contagemEspectadores: number = 0;
     private lucroTotal: number = 0;
 

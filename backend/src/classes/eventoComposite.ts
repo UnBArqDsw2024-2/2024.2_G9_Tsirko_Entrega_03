@@ -1,11 +1,11 @@
-import { EventoIngressoVisitor } from './eventoVisitor';
+import { EventoIngressoVisitor } from './eventoIngressoVisitor';
 
 interface ComponenteEvento {
     exibirDetalhes(): void;
     accept(visitor: EventoIngressoVisitor): void;
 }
 
-class EventoComposite implements ComponenteEvento {
+export class EventoComposite implements ComponenteEvento {
     private eventos: ComponenteEvento[] = [];
 
     adicionarEvento(evento: ComponenteEvento): void {
