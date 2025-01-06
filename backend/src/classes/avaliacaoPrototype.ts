@@ -16,10 +16,10 @@ export class AvaliacaoPrototype {
     evento: Evento
   ): Avaliacao {
     const novaAvaliacao = this.prototipo.clone();
-    novaAvaliacao['nota'] = nota;
-    novaAvaliacao['comentario'] = comentario;
-    novaAvaliacao['espectador'] = espectador;
-    novaAvaliacao['evento'] = evento;
+    novaAvaliacao.setAvalicaoNota(nota);
+    novaAvaliacao.setAvalicaoComentario(comentario);
+    novaAvaliacao.setAvalicaoEspectador(espectador);
+    novaAvaliacao.setAvaliacaoEvento(evento);
 
     return novaAvaliacao;
   }
