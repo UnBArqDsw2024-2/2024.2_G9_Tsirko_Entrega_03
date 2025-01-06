@@ -27,6 +27,10 @@ export class EventoIngressoVisitor implements EventoVisitor {
         this.registrarIngresso(20.0); // Valor fixo como exemplo
     }
 
+    visitarComposite(composite: EventoComposite): void {
+        composite.getEventos().forEach((evento: EventoComposite) => evento.accept(this));
+    }
+
     getContagemEspectadores(): number {
         return this.contagemEspectadores;
     }
