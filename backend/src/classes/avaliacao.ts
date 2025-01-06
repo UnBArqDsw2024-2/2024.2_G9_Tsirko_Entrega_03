@@ -14,6 +14,22 @@ export class Avaliacao {
     this.espectador = espectador;
   }
 
+  public setAvaliacaoEvento(evento: Evento): void {
+    this.evento = evento;
+  }
+
+  public setAvalicaoNota(nota: number): void {
+    this.nota = nota;
+  }
+  
+  public setAvalicaoComentario(comentario: string): void {
+    this.comentario = comentario;
+  }
+
+  public setAvalicaoEspectador(espectador: Espectador): void {
+    this.espectador = espectador;
+  }
+
   public getAvaliacaoNota(): number {
     return this.nota;
   }
