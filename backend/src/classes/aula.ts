@@ -1,5 +1,5 @@
 import { Evento } from './evento';
-import { EventoIngressoVisitor } from './EventoIngressoVisitor';
+import { EventoIngressoVisitor } from './eventoIngressoVisitor';
 export class Aula extends Evento {
     private tema: string;
     private professor: string;

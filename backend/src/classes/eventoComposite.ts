@@ -1,11 +1,14 @@
 import { EventoIngressoVisitor } from './eventoIngressoVisitor';
 
-interface ComponenteEvento {
+export interface ComponenteEvento {
     exibirDetalhes(): void;
     accept(visitor: EventoIngressoVisitor): void;
 }
 
 export class EventoComposite implements ComponenteEvento {
+    getEventos() {
+        throw new Error("Method not implemented.");
+    }
     private eventos: ComponenteEvento[] = [];
 
     adicionarEvento(evento: ComponenteEvento): void {
@@ -22,7 +25,7 @@ export class EventoComposite implements ComponenteEvento {
     }
 
     accept(visitor: EventoIngressoVisitor): void {
-        visitor.visitComposite(this);
+        visitor.visitarComposite(this);
         this.eventos.forEach(evento => evento.accept(visitor));
     }
 }

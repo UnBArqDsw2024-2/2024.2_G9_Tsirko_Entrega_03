@@ -9,6 +9,16 @@ interface EventoVisitor {
 }
 
 export class EventoIngressoVisitor implements EventoVisitor {
+    visitComposite(composite: EventoComposite): void {
+        throw new Error("Method not implemented.");
+    }
+    visitEspetaculo(espetaculo: Espetaculo): void {
+        throw new Error("Method not implemented.");
+    }
+    visitAula(aula: Aula): void {
+        throw new Error("Method not implemented.");
+    }
+
     private contagemEspectadores: number = 0;
     private lucroTotal: number = 0;
 
@@ -19,12 +29,14 @@ export class EventoIngressoVisitor implements EventoVisitor {
 
     visitarEspetaculo(espetaculo: Espetaculo): void {
         console.log(`Gerando ingresso para Espetáculo: ${espetaculo.getNome()}`);
-        this.registrarIngresso(50.0); // Valor fixo como exemplo
+        const valor = 50.0; // Valor variável
+        this.registrarIngresso(valor); 
     }
 
     visitarAula(aula: Aula): void {
         console.log(`Gerando ingresso para Aula: ${aula.getNome()}`);
-        this.registrarIngresso(20.0); // Valor fixo como exemplo
+        const valor = 20.0; // Valor variável
+        this.registrarIngresso(valor); 
     }
 
     visitarComposite(composite: EventoComposite): void {
@@ -37,5 +49,13 @@ export class EventoIngressoVisitor implements EventoVisitor {
 
     getLucroTotal(): number {
         return this.lucroTotal;
+    }
+}
+
+(Evento.prototype as any)["accept"] = function(visitor: EventoVisitor): void {
+    if (this instanceof Espetaculo) {
+        visitor.visitEspetaculo(this);
+    } else if (this instanceof Aula) {
+        visitor.visitAula(this);
     }
 }
