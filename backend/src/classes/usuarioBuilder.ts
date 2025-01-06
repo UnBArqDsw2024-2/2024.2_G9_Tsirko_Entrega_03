@@ -1,10 +1,13 @@
-import { Usuario } from './usuario';
+
 import { SenhaProxy } from './usuarioProxy'; 
+import { Usuario, TipoUsuario } from './usuario';
+
 
 export class UsuarioBuilder {
   private nome: string = "";
   private email: string = "";
   private senha: string = "";
+  private tipo: TipoUsuario = TipoUsuario.ESPECTADOR; // Valor padrão
 
   public setNome(nome: string): UsuarioBuilder {
     this.nome = nome;
@@ -21,6 +24,11 @@ export class UsuarioBuilder {
     return this;
   }
 
+  public setTipo(tipo: TipoUsuario): UsuarioBuilder {
+    this.tipo = tipo;
+    return this; // Permite encadeamento de chamadas
+  }
+
   public build(): Usuario {
     if (!this.email.includes('@')) {
       throw new Error("Email inválido!");
@@ -32,6 +40,6 @@ export class UsuarioBuilder {
     // Use o proxy para gerenciar a senha
     const senhaSegura = SenhaProxy.processarSenha(this.senha);
 
-    return new Usuario(this.nome, this.email, senhaSegura);
+    return new Usuario(this.nome, this.email, senhaSegura, this.tipo);
   }
 }
