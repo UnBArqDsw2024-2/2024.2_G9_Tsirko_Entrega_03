@@ -9,7 +9,7 @@ export class Usuario {
       this.senha = senha;
     }
   
-    public validarDados(): boolean {
+    private validarDados(): boolean { // No diagrama de classes consta como privado
       return this.email.includes('@') && this.senha.length >= 6;
     }
   
