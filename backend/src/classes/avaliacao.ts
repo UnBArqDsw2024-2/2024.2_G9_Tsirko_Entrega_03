@@ -6,12 +6,14 @@ export class Avaliacao {
   private comentario: string;
   private espectador: Espectador;
   private evento: Evento;
+  private marcador: string;
 
-  constructor(evento: Evento, nota: number, comentario: string, espectador: Espectador) {
+  constructor(evento: Evento, nota: number, comentario: string, espectador: Espectador, marcador: string) {
     this.evento = evento;
     this.nota = nota;
     this.comentario = comentario;
     this.espectador = espectador;
+    this.marcador = marcador;
   }
 
   public setAvaliacaoEvento(evento: Evento): void {
@@ -46,7 +48,16 @@ export class Avaliacao {
     return this.evento;
   }
 
+  public getMarcador(): string {
+    return this.marcador;
+  }
+
+  public setMarcador(valor: string)
+  {
+    this.marcador;
+  }
+
   public clone(): Avaliacao {
-    return new Avaliacao(this.evento, this.nota, this.comentario, this.espectador);
+    return new Avaliacao(this.evento, this.nota, this.comentario, this.espectador, this.marcador);
   }
 }
