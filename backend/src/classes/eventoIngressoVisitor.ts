@@ -60,8 +60,20 @@ export class EventoIngressoVisitor implements EventoVisitor {
     }
 }
 
+// sugestão de método que poderia agregar valor ao código é um mecanismo para calcular o lucro médio por ingresso:
 
-/*
+getLucroMedioPorIngresso(): number {
+    if (this.contagemEspectadores === 0) {
+        return 0; // Evitar divisão por zero
+    }
+    return this.lucroTotal / this.contagemEspectadores;
+
+}
+
+ Este método poderia ser incluído dentro da classe EventoIngressoVisitor.
+ Ele aproveita os dados já disponíveis (contagemEspectadores e lucroTotal)
+
+
 Alternativa para ao visitar um EventoComposite, terá uma mensagem 
 no console indicando o nome do composite e o código 
 visitará cada evento dentro dele, acionando a visitação de cada evento 
@@ -83,7 +95,4 @@ Ajustes no accept:
         visitor.visitComposite(this);
     }
 }
-
-*\
-
 

@@ -30,14 +30,21 @@ export class EventoComposite implements ComponenteEvento {
     }
 }
 
+// Sugestão de método temEventos que verifica se existem eventos disponíveis:
+
+ temEventos(): boolean {
+    return this.eventos.length > 0;
+}
+
+// Verifica se contém algum evento, retornando true se houver pelo menos um evento e false caso contrário.
 
 /*
 Implementação alternativa que segue uma abordagem para lidar 
 com o Visitor em uma coleção de eventos eliminando a 
 necessidade de verificações dinâmicas como instanceof:
-*\
+*/
 
-/*
+
 import { Evento } from './evento';
 
 export class EventoComposite extends Evento {
@@ -64,4 +71,4 @@ export class EventoComposite extends Evento {
         this.eventos.forEach((evento) => evento.exibirDetalhes());
     }
 }
-*/
+
