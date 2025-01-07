@@ -17,7 +17,8 @@ export class Usuario {
     this.tipo = tipo; // Inicializando o tipo
   }
 
-  public validarDados(): boolean {
+  private validarDados(): boolean {
+    // privado no diagrama de classes
     return this.email.includes('@') && this.senha.length >= 6;
   }
 

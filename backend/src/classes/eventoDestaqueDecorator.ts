@@ -18,6 +18,12 @@ export class EventoDestaqueDecorator extends EventoDecorator {
   }
 
   private eEventoDestaque(): boolean {
-    return this.avaliacoes.length >= 5;
+    if (this.avaliacoes.length < 5) {
+      return false;
+    }
+    const notasSoma = this.avaliacoes.reduce((total, avaliacao) => total + avaliacao.getAvaliacaoNota(), 0);
+    const notasMedia = notasSoma / this.avaliacoes.length;
+
+    return notasMedia >= 8;
   }
 }
