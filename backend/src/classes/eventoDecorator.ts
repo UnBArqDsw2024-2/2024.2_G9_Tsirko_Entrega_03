@@ -7,6 +7,7 @@ export abstract class EventoDecorator extends Evento {
     super(evento.getNome(), evento.getDescricao(), evento.getData(), evento.getHorario());
     this.evento = evento;
 }
-
-  public abstract getDescricao(): string;
+  exibirDetalhes(): void {
+    this.evento.exibirDetalhes();
+  }
 }

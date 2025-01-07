@@ -24,8 +24,4 @@ export class EventoDescontoDecorator extends EventoDecorator {
     public getDesconto(): number {
         return this.desconto;
     }
-
-    exibirDetalhes(): void {
-        this.evento.exibirDetalhes();
-    }
 }
