@@ -26,4 +26,8 @@ export class EventoDestaqueDecorator extends EventoDecorator {
 
     return notasMedia >= 8;
   }
+  
+  exibirDetalhes(): void {
+    this.evento.exibirDetalhes();
+  }
 }

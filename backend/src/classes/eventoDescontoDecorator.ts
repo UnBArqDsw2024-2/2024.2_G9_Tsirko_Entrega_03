@@ -1,3 +1,4 @@
+import { Evento } from './evento';
 import { EventoDecorator } from './eventoDecorator';
 
 export class EventoDescontoDecorator extends EventoDecorator {
@@ -22,5 +23,9 @@ export class EventoDescontoDecorator extends EventoDecorator {
 
     public getDesconto(): number {
         return this.desconto;
+    }
+
+    exibirDetalhes(): void {
+        this.evento.exibirDetalhes();
     }
 }
