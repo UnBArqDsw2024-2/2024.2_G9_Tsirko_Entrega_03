@@ -62,14 +62,37 @@ export class EventoIngressoVisitor implements EventoVisitor {
 
 // sugestão de método que poderia agregar valor ao código é um mecanismo para calcular o lucro médio por ingresso:
 
-// getLucroMedioPorIngresso(): number {
-//    if (this.contagemEspectadores === 0) {
-//        return 0; // Evitar divisão por zero
-//    }
-//    return this.lucroTotal / this.contagemEspectadores;
+getLucroMedioPorIngresso(): number {
+    if (this.contagemEspectadores === 0) {
+        return 0; // Evitar divisão por zero
+    }
+    return this.lucroTotal / this.contagemEspectadores;
 
-//}
+}
 
-// Este método poderia ser incluído dentro da classe EventoIngressoVisitor.
-// Ele aproveita os dados já disponíveis (contagemEspectadores e lucroTotal)
+ Este método poderia ser incluído dentro da classe EventoIngressoVisitor.
+ Ele aproveita os dados já disponíveis (contagemEspectadores e lucroTotal)
+
+
+Alternativa para ao visitar um EventoComposite, terá uma mensagem 
+no console indicando o nome do composite e o código 
+visitará cada evento dentro dele, acionando a visitação de cada evento 
+Tornando a execução mais rastreável:
+
+visitComposite(composite: EventoComposite): void {
+    console.log(`Visitando composite: ${composite.getNome()}`);
+    composite.getEventos().forEach((evento) => evento.accept(this));
+}
+
+Ajustes no accept:
+
+(Evento.prototype as any)["accept"] = function(visitor: EventoVisitor): void {
+    if (this instanceof Espetaculo) {
+        visitor.visitEspetaculo(this);
+    } else if (this instanceof Aula) {
+        visitor.visitAula(this);
+    } else if (this instanceof EventoComposite) {
+        visitor.visitComposite(this);
+    }
+}
 
