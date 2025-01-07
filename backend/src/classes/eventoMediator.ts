@@ -11,11 +11,11 @@ export class EventoMediator {
         // Usando a factory para criar o evento com o tipo e os detalhes fornecidos
         return EventoFactory.criarEvento(tipo, nome, descricao, ...detalhes);
       } catch (error) {
-        console.error("Tipo de evento não identificado");
+          console.error("Tipo de evento não identificado");
         return null;
       }
     } else {
-      console.log("Usuário não autorizado a criar eventos.");
+        console.log("Usuário não autorizado a criar eventos.");
       return null;
     }
   }
