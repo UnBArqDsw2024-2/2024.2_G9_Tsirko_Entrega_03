@@ -45,6 +45,7 @@ necessidade de verificações dinâmicas como instanceof:
 */
 
 
+/*
 import { Evento } from './evento';
 
 export class EventoComposite extends Evento {
@@ -71,4 +72,5 @@ export class EventoComposite extends Evento {
         this.eventos.forEach((evento) => evento.exibirDetalhes());
     }
 }
+*/
 
